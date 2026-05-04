@@ -127,7 +127,7 @@ RECOMP_PATCH void EnSi_GiveToken(EnSi* this, PlayState* play) {
 
     recomp_printf("token location: 0x%06X\n", LOCATION_SKULL_TOKEN);
     if (rando_skulltulas_enabled()) {
-        rando_send_location(LOCATION_SKULL_TOKEN);
+        Z64ROnline_rando_send_location(LOCATION_SKULL_TOKEN);
         Message_StartTextbox(play, getTextId(tokenPrevGI[chestFlag]), NULL);
         Audio_PlayFanfare(NA_BGM_GET_SMALL_ITEM);
     } else {

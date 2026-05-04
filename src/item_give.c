@@ -735,7 +735,7 @@ RECOMP_PATCH void Player_DrawGetItem(PlayState* play, Player* player) {
         }
         Player_DrawGetItemImpl(play, player, &refPos, drawIdPlusOne);
         if (itemShuffled && location_to_send != 0) {
-            rando_send_location(location_to_send);
+            Z64ROnline_rando_send_location(location_to_send);
             location_to_send = 0;
         }
     }
@@ -1604,22 +1604,22 @@ RECOMP_PATCH u8 Item_Give(PlayState* play, u8 item) {
     if (item == ITEM_NONE) {
         return ITEM_NONE;
     } else if (item == ITEM_MASK_COUPLE) {
-        rando_send_location(GI_MASK_COUPLE);
+        Z64ROnline_rando_send_location(GI_MASK_COUPLE);
         return ITEM_NONE;
     } else if (item == ITEM_MASK_GORON) {
-        rando_send_location(GI_MASK_GORON);
+        Z64ROnline_rando_send_location(GI_MASK_GORON);
         return ITEM_NONE;
     } else if (item == ITEM_MASK_ZORA) {
-        rando_send_location(GI_MASK_ZORA);
+        Z64ROnline_rando_send_location(GI_MASK_ZORA);
         return ITEM_NONE;
     } else if (item == ITEM_MASK_GIBDO) {
-        rando_send_location(GI_MASK_GIBDO);
+        Z64ROnline_rando_send_location(GI_MASK_GIBDO);
         return ITEM_NONE;
     } else if (item == ITEM_MASK_GREAT_FAIRY) {
-        rando_send_location(GI_MASK_GREAT_FAIRY);
+        Z64ROnline_rando_send_location(GI_MASK_GREAT_FAIRY);
         return ITEM_NONE;
     } else if (item == ITEM_SWORD_GREAT_FAIRY) {
-        rando_send_location(ITEM_SWORD_GREAT_FAIRY);
+        Z64ROnline_rando_send_location(ITEM_SWORD_GREAT_FAIRY);
         return ITEM_NONE;
     }
 

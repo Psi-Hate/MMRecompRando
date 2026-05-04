@@ -549,12 +549,12 @@ void update_rando(PlayState* play) {
                 Interface_LoadItemIconImpl(play, EQUIP_SLOT_B);
             }
 
-            rando_send_location(LOCATION_INVENTORY_SWORD);
-            rando_send_location(LOCATION_INVENTORY_SHIELD);
+            Z64ROnline_rando_send_location(LOCATION_INVENTORY_SWORD);
+            Z64ROnline_rando_send_location(LOCATION_INVENTORY_SHIELD);
 
             for (int i = 0; i < rando_get_starting_heart_locations(); ++i)
             {
-                rando_send_location(0x0D0000 | i);
+                Z64ROnline_rando_send_location(0x0D0000 | i);
             }
 
             old_items_size = new_items_size;

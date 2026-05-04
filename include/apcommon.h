@@ -222,4 +222,7 @@ void randoEmitNormalNotification(const char* notif_text);
 void randoEmitErrorNotification(const char* error_text);
 bool randoGenerateMenuOpen();
 
+// Z64ROnline Campatibility
+void Z64ROnline_rando_send_location(u32 location);
+
 #endif

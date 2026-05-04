@@ -330,7 +330,7 @@ RECOMP_PATCH void EnElforg_FreeFloating(EnElforg* this, PlayState* play) {
             if (STRAY_FAIRY_TYPE(&this->actor) == STRAY_FAIRY_TYPE_CLOCK_TOWN) {
                 player->actor.freezeTimer = 100;
                 player->stateFlags1 |= PLAYER_STATE1_20000000;
-                rando_send_location(LOCATION_CLOCK_TOWN_STRAY_FAIRY);
+                Z64ROnline_rando_send_location(LOCATION_CLOCK_TOWN_STRAY_FAIRY);
                 // Bring me back to North Clock Town!
                 Message_StartTextbox(play, rando_get_item_id(LOCATION_CLOCK_TOWN_STRAY_FAIRY), NULL);
                 this->actionFunc = EnElforg_ClockTownFairyCollected;
@@ -341,7 +341,7 @@ RECOMP_PATCH void EnElforg_FreeFloating(EnElforg* this, PlayState* play) {
             if (Map_IsInDungeonOrBossArea(play)) {
                 //gSaveContext.save.saveInfo.inventory.strayFairies[gSaveContext.dungeonIndex]++;
                 recomp_printf("stray fairy location: 0x%06X\n", LOCATION_STRAY_FAIRY);
-                rando_send_location(LOCATION_STRAY_FAIRY);
+                Z64ROnline_rando_send_location(LOCATION_STRAY_FAIRY);
                 player->actor.freezeTimer = 10;
                 player->stateFlags1 |= PLAYER_STATE1_20000000;
                 // You found a Stray Fairy!
