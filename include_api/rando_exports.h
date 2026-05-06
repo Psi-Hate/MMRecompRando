@@ -4,6 +4,7 @@
 // Sending Checks
 RECOMP_IMPORT("mm_recomp_rando", s32 Actor_OfferGetItemHookExternal(Actor* actor, PlayState* play, GetItemId getItemId, u32 location, f32 xzRange, f32 yRange, bool use_workaround, bool item_is_shuffled));
 RECOMP_IMPORT("mm_recomp_rando", void rando_send_location_external(u32 location_id));
+RECOMP_IMPORT("mm_recomp_rando", void rando_send_location_force_external(u32 location_id));
 
 // Check if a Location is Checked
 RECOMP_IMPORT("mm_recomp_rando", bool rando_location_is_checked_external(u32 location_id));

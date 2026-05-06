@@ -83,6 +83,7 @@ bool is_multiworld = false;
 void randoStart(bool multiworld) {
     rando_started = true;
     is_multiworld = multiworld;
+    Z64ROnline_SetRandoMultiworldStatus(is_multiworld);
 }
 
 // Startup Menu

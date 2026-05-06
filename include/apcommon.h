@@ -142,6 +142,7 @@ RECOMP_IMPORT(".", u32 rando_get_location_type(u32 location_id));
 RECOMP_IMPORT(".", u32 rando_get_item_id(u32 location_id));
 RECOMP_IMPORT(".", void rando_broadcast_location_hint(u32 location_id));
 RECOMP_IMPORT(".", void rando_send_location(u32 location_id));
+RECOMP_IMPORT(".", void rando_send_location_force(u32 location_id));
 RECOMP_IMPORT(".", void rando_complete_goal());
 RECOMP_IMPORT(".", u32 rando_has_item(u32 item_id));
 RECOMP_IMPORT(".", u32 rando_has_item_async(u32 item_id));
@@ -224,5 +225,5 @@ bool randoGenerateMenuOpen();
 
 // Z64ROnline Campatibility
 void Z64ROnline_rando_send_location(u32 location);
-
+void Z64ROnline_SetRandoMultiworldStatus(bool multiworld);
 #endif

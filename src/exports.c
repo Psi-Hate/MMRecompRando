@@ -12,6 +12,10 @@ RECOMP_EXPORT void rando_send_location_external(u32 location_id) {
     return rando_send_location(location_id);
 }
 
+RECOMP_EXPORT void rando_send_location_force_external(u32 location_id) {
+    return rando_send_location_force(location_id);
+}
+
 // Check if a Location is Checked
 RECOMP_EXPORT bool rando_location_is_checked_external(u32 location_id) {
     return rando_location_is_checked(location_id);
